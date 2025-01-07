@@ -1,0 +1,19 @@
+---
+const { class: className, ...rest } = Astro.props;
+---
+
+<section class=`${ className ? className : "" } section-container`>
+	<slot />
+</section>
+
+<style lang="scss">
+	@use '../styles/global-abstracts' as *;
+
+	.section-container {
+	margin-top: $spacing-60;
+	padding-left: $global-padding;
+	padding-right: $global-padding;
+	display: flex;
+	justify-content: center;
+}
+</style>

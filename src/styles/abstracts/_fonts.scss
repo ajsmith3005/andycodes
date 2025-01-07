@@ -1,0 +1,53 @@
+@use '../global-abstracts' as *;
+
+body {
+	font-family: "PT Serif", serif;
+	font-size: $font-size-md;
+	text-wrap: pretty;
+}
+
+h1, h2, h3, h4, h5 {
+	font-family: "Nunito Sans", sans-serif;
+	font-weight: 750;
+}
+
+h1 {
+	font-size: $font-size-lg-title;
+}
+
+h2 {
+	font-size: $font-size-md-title;
+}
+
+h3 {
+	font-size: $font-size-sm-title;
+}
+
+.emphasis-text {
+	color: $color-accent-2;
+}
+
+.is-style-uppercase {
+	text-transform: uppercase;
+	font-family: "Nunito Sans", sans-serif;
+	font-weight: bold;
+	letter-spacing: 0.08em;
+}
+
+.is-style-undecorated {
+	text-decoration: none;
+}
+
+.is-style-hover-accent-1 {
+	transition: 300ms;
+
+	&:hover:not(.active) {
+		color: $color-accent-1;
+		cursor: pointer;
+	}
+}
+
+.is-style-link-in-text {
+	color: inherit;
+	text-decoration: underline;
+}

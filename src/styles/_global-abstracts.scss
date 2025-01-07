@@ -1,0 +1,45 @@
+/**
+ * Colors
+ */
+
+ $color-base-1: #F2F2F2;
+ $color-contrast-dark: #121212;
+ $color-contrast-light: #FFFFFF;
+ $color-accent-1: #E52B2A;
+ $color-accent-2: #09843B;
+ 
+
+/**
+* Spacing
+*/
+
+ $global-padding: clamp(1.25rem, 0.717rem + 2.43vw, 3rem);
+ $spacing-05: 0.5rem;
+ $spacing-10: 1rem;
+ $spacing-20: 2rem;
+ $spacing-30: 3rem;
+ $spacing-40: 4rem;
+ $spacing-50: 5rem;
+ $spacing-60: 6rem;
+ $content-size: 44rem;
+ $wide-size: 68rem;
+ $extra-wide-size: 100rem;
+
+
+/**
+* Font Sizes
+*/
+
+ $font-size-sm: clamp(0.75rem, 0.712rem + 0.17vw, 0.875rem);
+ $font-size-md: clamp(1rem, 0.962rem + 0.17vw, 1.125rem);
+ $font-size-lg: clamp(1.125rem, 1.087rem + 0.17vw, 1.25rem);
+ $font-size-sm-title: clamp(1.5rem, 1.348rem + 0.7vw, 2rem);
+ $font-size-md-title: clamp(1.75rem, 1.734rem + 1.22vw, 2.875rem);
+ $font-size-lg-title: clamp(2.625rem, 2.359rem + 1.22vw, 3.5rem);
+
+
+/**
+* Variables
+*/
+
+ $radius-1: 0.5rem;

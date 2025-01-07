@@ -1,0 +1,163 @@
+---
+import LogoCompact from '../../public/logo-compact.png';
+import footerBannerImage from '../../public/hero-background.jpg';
+---
+
+<div class="site-footer">
+	<img loading="lazy" src={footerBannerImage.src} class="footer-banner-img" alt="golf clubs"> 
+	<div class="footer-container">
+		<div class="inner-footer-container is-style-wide-size">
+			<div class="footer-logo-container"><img src={LogoCompact.src} class="logo" alt="logo" loading="lazy"/></div>
+			<div class="footer-links-container">
+				<div>
+					<h3 class="is-style-uppercase">Our Company</h3>
+					<p><a href="/example/">Example</a>
+						<br><a href="/example/">Example</a>
+						<br><a href="/example/">Example</a>
+					</p>
+				</div>
+				<div>
+					<h3 class="is-style-uppercase">Contact Us</h3>
+					<p>Call or Text: <a href="tel:+5555555555">(555) 555-5555</a><br>
+						Email: <a href="mailto:example@examplemail.com">example@examplemail.com</a><br>
+						Based in Exampleville, EX<br>
+					</p>
+				</div>
+				<div>
+					<h3 class="is-style-uppercase">Helpful Resources</h3>
+					<p><a href="https://docs.astro.build/en/getting-started/" target="_blank">Astro Documentation</a><br>
+						<a href="https://stackoverflow.com/" target="_blank">Stack Overflow</a>
+						<br><a href="https://developer.mozilla.org/en-US/" target="_blank">MDN Web Docs</a>
+						<br><a href="https://www.w3schools.com/" target="_blank">W3 Schools</a>
+						<br><a href="https://css-tricks.com/" target="_blank">CSS Tricks</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="vescent-banner is-style-uppercase">
+		<p>created by <a href="https://www.andycodes.net/" target="_blank">Andy Smith</a></p>
+	</div>
+	<script async defer>
+		const menuIcon = document.querySelector(".main-nav-toggle");
+		const htmlElement = document.querySelector('html');
+		
+		function toggleMobileMenu() {
+			if (htmlElement.classList.contains('mobile-menu-open')) {
+				htmlElement.classList.remove('mobile-menu-open');
+			} else {
+				htmlElement.classList.add('mobile-menu-open');
+			}
+		}
+		
+		menuIcon.addEventListener('click', toggleMobileMenu);
+	</script>
+</div>
+
+<style lang="scss">
+	@use '../styles/_global-abstracts.scss' as *;
+
+	.site-footer {
+		background-color: $color-contrast-dark;
+		justify-content: center;
+		margin-top: $spacing-60;;
+
+		.footer-banner-img {
+			width: 100%;
+			height: calc(10vh + 17vw);
+			max-height: 28vh;
+			min-height: 10rem;
+			object-position: 30% 70%;
+			object-fit: cover;
+		}
+		
+		.footer-container {
+			display: flex;
+			flex-wrap: wrap;
+			gap: $spacing-10;
+			flex-grow: 1;
+			width: 100%;
+			justify-content: center;
+			align-items: flex-start;
+			color: $color-contrast-light;
+			padding: $spacing-20 $global-padding;
+			
+			.inner-footer-container {
+				display: flex;
+				flex-wrap: wrap;
+				row-gap: 2em;
+				max-width: $extra-wide-size;
+			}
+
+			.logo {
+				height: 7rem;
+				align-self: center;
+			}
+
+			h3 {
+				text-transform: uppercase;
+				font-size: $font-size-md;
+			}
+
+			p {
+				font-size: $font-size-sm;
+
+				a {
+					text-decoration: underline;
+					text-decoration-thickness: 1px;
+					color: $color-contrast-light;
+					transition: 300ms;
+	
+					&:hover:not(.active) {
+					color: $color-accent-1;
+				}
+				}
+			}
+
+			.footer-logo-container {
+				display: flex;
+				flex: 1 0 auto;
+				justify-content: center;
+				margin: auto;
+			}
+
+			.footer-links-container {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				flex: 1 1 auto;
+				margin: auto;
+
+				& > div {
+					flex: 1 0 0;
+					text-wrap: nowrap;
+					padding: $spacing-05 $spacing-10;
+
+					p {
+						letter-spacing: .08em;
+						line-height: 185%;
+					}
+				}
+			}
+		}
+
+		.vescent-banner {
+			box-sizing: border-box;
+			width: 100%;
+			text-align: center;
+			background-color: $color-accent-2;
+			padding: $spacing-05 $global-padding;
+
+			p {
+				margin: 0;
+				color: $color-contrast-light;
+				font-size: $font-size-sm;
+
+				a {
+					text-decoration: none;
+					color: inherit;
+				}
+			}
+		}
+	}
+</style>

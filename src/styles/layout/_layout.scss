@@ -1,0 +1,90 @@
+@use '../global-abstracts' as *;
+
+html {
+	text-wrap: pretty;
+}
+
+h1 {
+	margin-bottom: $spacing-20;
+	line-height: 1.25;
+}
+
+h2, h3, h4, h5 {
+	margin-top: 0;
+	margin-bottom: $spacing-10;
+	line-height: 1.25;
+}
+
+p {
+	margin-bottom: $spacing-10;
+	line-height: 1.55em;
+}
+
+li {
+	line-height: 1.55em;
+}
+
+ul {
+	margin-bottom: $spacing-10;
+}
+
+.has-global-padding {
+	padding-left: $global-padding;
+	padding-right: $global-padding;
+}
+
+.side-by-side-container > * {
+	flex-grow: 1;
+	flex-shrink: 1;
+	flex-basis: 25rem;
+}
+
+.is-style-wrap {
+	flex-wrap: wrap;
+}
+
+.is-style-nowrap {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.is-style-centered {
+	justify-content: center;
+	text-align: center;
+}
+
+.is-layout-flex-column {
+	flex-direction: column;
+	align-items: center;
+}
+
+.is-style-narrow-size {
+	max-width: $content-size;
+	width: 10rem;
+}
+
+.is-style-content-size {
+	flex-grow: 1;
+	max-width: $content-size;
+}
+
+.is-style-wide-size {
+	flex-grow: 1;
+	max-width: $wide-size;
+}
+
+.is-style-no-grow {
+	flex-grow: 0;
+}
+
+.image-contains-text {
+	color: $color-contrast-light;
+}
+
+.success-cards-container .card {
+	margin-top: $spacing-30;
+}
+
+.testimonial-cards-container .card {
+	margin-top: $spacing-30
+}

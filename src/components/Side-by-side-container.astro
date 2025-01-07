@@ -1,0 +1,19 @@
+---
+
+---
+
+<div class="side-by-side-container is-style-wide-size">
+	<slot />
+</div>
+
+<style lang="scss">
+	@use '../styles/global-abstracts' as *;
+
+	.side-by-side-container {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: $spacing-30 $spacing-50;		
+	}
+</style>
