@@ -1,16 +1,47 @@
 ---
+import Layout from '../layouts/Layout.astro';
+import Buttons from '../components/Buttons.astro';
+import Button from '../components/Button.astro';
+import SectionContainer from '../components/Section-container.astro';
 
+import '../styles/app.scss';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout pageName="is-page-home">
+	<div class="hero-container image-contains-text has-global-padding">
+		<div class="hero-text">
+			<h1>Example Hero Text<br>Make Your Site's Purpose Clear</h1>
+			<Button style="solid" href="/example/">Example link</Button>
+		  </div>
+	</div>
+	<SectionContainer class="is-layout-flex-column is-style-centered">
+		<div class="is-style-content-size">
+			<h2>Additional Info,<br>or Compelling Call to Action</h2>
+			<p>We will help you get the most from your website, whether you're a small business just getting started or an established company with an existing brand. We have a variety of services available for clients of all types to give you the platform you need to achieve your web based goals.</p>
+			<Buttons class="is-style-centered">
+				<Button style="solid" href="/example/">Example 1</Button>
+				<Button style="outlined" href="/example/">Example 2</Button>
+			</Buttons>
+		</div>
+	</SectionContainer>
+</Layout>
+
+<style lang="scss">
+	@use '../styles/_global-abstracts.scss' as *;
+
+	.hero-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+		width: 100%;
+		background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, 0.5)), url(../../hero-background.jpg);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+
+		.hero-text {
+			text-align: center;
+		}
+	}
+</style>

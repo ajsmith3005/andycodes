@@ -1,0 +1,48 @@
+---
+const style = Astro.props.style;
+const href = Astro.props.href;
+const target = Astro.props.target;
+---
+
+<a class=`${style} is-style-uppercase button` href={href} target={target}>
+	<slot />
+</a>
+
+<style lang="scss">
+	@use '../styles/_global-abstracts.scss' as *;
+
+	a {
+		display: inline-block;
+		padding: 0.75em $spacing-10;
+		border: 2px solid;
+		border-color: $color-accent-1;
+		color: $color-contrast-light;
+		background-color: $color-accent-1;
+		font-weight: bold;
+		border-radius: $radius-1;
+		text-decoration: none;
+		text-align: center;
+		font-family: "Nunito Sans", sans-serif;
+		font-size: $font-size-sm;
+		transition: 300ms;
+		min-width: 12em;
+		text-wrap: nowrap;
+
+		&:hover {
+			border-color: $color-accent-1;
+			background-color: $color-contrast-light;
+			color: $color-accent-1;
+		}
+
+		&.outlined {
+			background-color: transparent;
+			color: $color-accent-1;
+
+			&:hover {
+				color: $color-contrast-light;
+				border-color: $color-accent-1;
+				background-color: $color-accent-1;
+			}
+		}
+	}
+</style>
