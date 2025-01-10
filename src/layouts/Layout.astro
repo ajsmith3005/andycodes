@@ -27,10 +27,13 @@ const pageName = Astro.props.pageName;
 </html>
 
 <style lang="scss">
+	@use '../styles/global-abstracts' as *;
+
 	html,
 	body {
 		margin: 0;
 		width: 100%;
 		height: 100%;
+		background-color: $color-base-1;
 	}
 </style>
