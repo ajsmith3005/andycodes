@@ -1,14 +1,18 @@
 @use '../global-abstracts' as *;
 
 body {
-	font-family: "PT Serif", serif;
+	font-family: "Outfit", sans-serif;
 	font-size: $font-size-md;
 	text-wrap: pretty;
 }
 
-h1, h2, h3, h4, h5 {
-	font-family: "Nunito Sans", sans-serif;
-	font-weight: 750;
+h1, h2 {
+	font-family: "Knewave", sans-serif;
+	font-weight: 400;
+}
+
+h3, h4, h5 {
+	font-family: "Outfit", sans-serif;
 }
 
 h1 {
@@ -29,13 +33,9 @@ h3 {
 
 .is-style-uppercase {
 	text-transform: uppercase;
-	font-family: "Nunito Sans", sans-serif;
-	font-weight: bold;
+	font-family: "Outfit", sans-serif;
+	font-weight: 600;
 	letter-spacing: 0.08em;
-}
-
-.is-style-undecorated {
-	text-decoration: none;
 }
 
 .is-style-hover-accent-1 {

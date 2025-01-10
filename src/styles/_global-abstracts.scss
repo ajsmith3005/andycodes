@@ -30,12 +30,12 @@
 * Font Sizes
 */
 
- $font-size-sm: clamp(0.75rem, 0.712rem + 0.17vw, 0.875rem);
+ $font-size-sm: 1rem;
  $font-size-md: clamp(1rem, 0.962rem + 0.17vw, 1.125rem);
  $font-size-lg: clamp(1.125rem, 1.087rem + 0.17vw, 1.25rem);
- $font-size-sm-title: clamp(1.5rem, 1.348rem + 0.7vw, 2rem);
- $font-size-md-title: clamp(1.75rem, 1.734rem + 1.22vw, 2.875rem);
- $font-size-lg-title: clamp(2.625rem, 2.359rem + 1.22vw, 3.5rem);
+ $font-size-sm-title: clamp(1.75rem, 1.674rem + 0.35vw, 2rem);
+ $font-size-md-title: clamp(2.5rem, 1.891rem + 2.78vw, 4.5rem);
+ $font-size-lg-title: clamp(3rem, 1.668rem + 6.09vw, 7.375rem);
 
 
 /**
