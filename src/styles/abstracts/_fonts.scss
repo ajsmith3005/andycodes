@@ -13,10 +13,12 @@ h1, h2 {
 
 h3, h4, h5 {
 	font-family: "Outfit", sans-serif;
+	font-weight: 700;
 }
 
 h1 {
 	font-size: $font-size-lg-title;
+	color: $color-contrast-light;
 }
 
 h2 {
@@ -31,11 +33,12 @@ h3 {
 	color: $color-accent-2;
 }
 
-.is-style-uppercase {
+a {
 	text-transform: uppercase;
 	font-family: "Outfit", sans-serif;
 	font-weight: 600;
 	letter-spacing: 0.08em;
+	color: $color-accent-1;
 }
 
 .is-style-hover-accent-1 {
