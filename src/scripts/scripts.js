@@ -33,29 +33,3 @@ anchor.addEventListener('click', function(event) {
 	smoothScroll(targetID, 500);
 });
 });
-
-
-// Collapsing dialog functionality
-function resizeDialogContent(content) {
-	content.style.maxHeight = content.scrollHeight + "px";
-}
-
-document.querySelectorAll('.dropdown-btn').forEach(toggle => {
-	toggle.addEventListener('click', function(event) {
-		event.preventDefault();
-		this.parentElement.parentElement.classList.toggle('collapsed');
-		let content = this.parentElement.nextElementSibling;
-		content.classList.toggle('expanded');
-		if (content.style.maxHeight){
-			content.style.maxHeight = null;
-			} else {
-			resizeDialogContent(content);
-			}
-	})
-})
-
-window.addEventListener('resize', () => {
-	document.querySelectorAll('.expanded').forEach( resizableContainer => {
-		resizeDialogContent(resizableContainer);	
-	}) 
-})

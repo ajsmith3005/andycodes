@@ -43,24 +43,9 @@ ul {
 	flex-wrap: wrap;
 }
 
-.is-style-nowrap {
-	display: flex;
-	flex-wrap: nowrap;
-}
-
 .is-style-centered {
 	justify-content: center;
 	text-align: center;
-}
-
-.is-layout-flex-column {
-	flex-direction: column;
-	align-items: center;
-}
-
-.is-style-narrow-size {
-	max-width: $content-size;
-	width: 10rem;
 }
 
 .is-style-content-size {
@@ -79,12 +64,4 @@ ul {
 
 .image-contains-text {
 	color: $color-contrast-light;
-}
-
-.success-cards-container .card {
-	margin-top: $spacing-30;
-}
-
-.testimonial-cards-container .card {
-	margin-top: $spacing-30
 }

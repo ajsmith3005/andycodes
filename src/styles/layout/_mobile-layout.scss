@@ -1,72 +1,6 @@
 @use '../global-abstracts' as *;
 
-html.mobile-menu-open {
-	body {
-		overflow: hidden;
-	}
-
-	.main-nav-toggle-open {
-		display: none;
-	}
-
-	.main-nav-toggle-close {
-		display: block;
-	}
-}
-
 @media screen and (max-width: 780px) {
-
-	.site-header {
-		.main-nav-toggle {
-			display: block !important;
-
-			.main-nav-toggle-button {
-				height: 2.5rem;
-				width: 2.5rem;
-			}
-		}
-
-		.main-nav {
-			visibility: hidden;
-			display: flex;
-			align-items: center;
-			transition: 500ms;
-			position: fixed;
-			background-color: $color-contrast-dark;
-			top: 0;
-			left: -110%;
-			opacity: 0;
-			width: 100vw;
-			height: 100vh;
-			z-index: 10;
-			padding: $global-padding;
-			
-			ul {
-				flex-direction: column;
-			}
-		}
-	}
-
-	html.mobile-menu-open {
-		.site-header {
-			.main-nav {
-				visibility: visible;
-				opacity: 1;
-				left: 0%;
-
-			}
-
-			.main-nav-toggle-close {
-				display: block !important;
-			}
-
-			.main-nav-toggle-open {
-				display: none;
-			}
-
-		}
-		
-	}
 
 	.site-footer {
 		.footer-container {
@@ -88,10 +22,6 @@ html.mobile-menu-open {
 	ul.is-style-centered-mobile {
 		display: inline-block;
 		text-align: center;
-	}
-
-	.is-style-narrow-size {
-		max-width: $content-size;
 	}
 
 	.card {

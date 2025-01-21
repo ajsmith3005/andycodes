@@ -1,7 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Buttons from '../components/Buttons.astro';
-import Button from '../components/Button.astro';
 import SectionContainer from '../components/Section-container.astro';
 
 import '../styles/app.scss';
@@ -11,17 +9,12 @@ import '../styles/app.scss';
 	<div class="hero-container image-contains-text has-global-padding">
 		<div class="hero-text">
 			<h1>Example Hero Text<br>Make Your Site's Purpose Clear</h1>
-			<Button style="solid" href="/example/">Example link</Button>
 		  </div>
 	</div>
 	<SectionContainer class="is-layout-flex-column is-style-centered">
 		<div class="is-style-content-size">
 			<h2>Additional Info,<br>or Compelling Call to Action</h2>
 			<p>We will help you get the most from your website, whether you're a small business just getting started or an established company with an existing brand. We have a variety of services available for clients of all types to give you the platform you need to achieve your web based goals.</p>
-			<Buttons class="is-style-centered">
-				<Button style="solid" href="/example/">Example 1</Button>
-				<Button style="outlined" href="/example/">Example 2</Button>
-			</Buttons>
 		</div>
 	</SectionContainer>
 </Layout>
