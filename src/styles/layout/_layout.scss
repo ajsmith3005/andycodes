@@ -65,3 +65,12 @@ ul {
 .image-contains-text {
 	color: $color-contrast-light;
 }
+
+.is-style-hover-effect-1 {
+	transition: $delay-1;
+
+	&:hover:not(.active) {
+		scale: 1.07;
+		filter: drop-shadow(5px 5px 6px rgba(0, 0, 0, 0.3)) brightness(110%);
+	}
+}
