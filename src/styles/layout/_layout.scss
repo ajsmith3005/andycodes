@@ -28,6 +28,10 @@ ul {
 	margin-bottom: $spacing-10;
 }
 
+.logo {
+	height: clamp(3.25rem, 2.725rem + 2.63vw, 5.188rem);
+}
+
 .has-global-padding {
 	padding-left: $global-padding;
 	padding-right: $global-padding;
@@ -70,7 +74,16 @@ ul {
 	transition: $delay-1;
 
 	&:hover:not(.active) {
-		scale: 1.07;
+		scale: 1.05;
 		filter: drop-shadow(5px 5px 6px rgba(0, 0, 0, 0.3)) brightness(110%);
+	}
+}
+
+.is-style-nav-icon {
+	width: clamp(1.875rem, 1.536rem + 1.69vw, 3.125rem);
+	height: clamp(1.875rem, 1.536rem + 1.69vw, 3.125rem);
+
+	path {
+		fill: $color-accent-2;
 	}
 }
