@@ -1,0 +1,61 @@
+---
+ 
+---
+
+<canvas id="canvas" class="indicator"></canvas>
+
+<script>
+import * as THREE from 'three';
+import {OrbitControls} from 'three/addons';
+
+const canvas = document.getElementById('canvas');
+const body = document.querySelector('body');
+
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera( 75, body.offsetWidth / body.offsetHeight, 0.1, 1000 );
+
+const renderer = new THREE.WebGLRenderer( {
+  canvas: canvas,
+  antialias: true
+} );
+renderer.setSize( body.offsetWidth, body.offsetHeight );
+renderer.setAnimationLoop( animate );
+
+const geometry = new THREE.BoxGeometry( 1, 1, 1 );
+const material = new THREE.MeshLambertMaterial( { color: '#4fd5dd', emissive: '#4fd5dd' } );
+const cube = new THREE.Mesh( geometry, material );
+scene.add( cube );
+
+const light = new THREE.DirectionalLight(0xff00ff, 10)
+light.position.set(100, 1, 1);
+scene.add( light );
+
+camera.position.z = 5;
+
+function animate() {
+
+	cube.rotation.x += 0.01;
+	cube.rotation.y += 0.01;
+
+	renderer.render( scene, camera );
+
+}
+
+window.addEventListener('resize', () => {
+  camera.aspect = body.offsetWidth / body.offsetHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize( window.innerWidth, body.offsetHeight );
+});
+
+</script>
+
+<style>
+ #canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+ }
+</style>
