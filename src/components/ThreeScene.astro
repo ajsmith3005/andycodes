@@ -21,18 +21,6 @@ const renderer = new THREE.WebGLRenderer( {
 renderer.setSize( body.offsetWidth, body.offsetHeight );
 renderer.setAnimationLoop( animate );
 
-const geometry = new THREE.BoxGeometry( 1, 1, 1 );
-const material = new THREE.MeshLambertMaterial( { 
-  color: '#4fd5dd', 
-  emissive: '#4fd5dd',
-  transparent: true,
-  opacity: 0.2 
-} );
-const cube = new THREE.Mesh( geometry, material );
-scene.add( cube );
-
-
-
 const textureArray = Array(
   new THREE.TextureLoader().load('filled-dot.svg'),
   new THREE.TextureLoader().load('outlined-dot.svg'),
@@ -40,8 +28,19 @@ const textureArray = Array(
   new THREE.TextureLoader().load('filled-dot-dark.svg'),
   new THREE.TextureLoader().load('outlined-dot-dark.svg'),
   new THREE.TextureLoader().load('nested-dot-dark.svg'),
-  
-  );
+  new THREE.TextureLoader().load('filled-dot-dark.svg'),
+  new THREE.TextureLoader().load('outlined-dot-dark.svg'),
+  new THREE.TextureLoader().load('nested-dot-dark.svg'),
+  new THREE.TextureLoader().load('filled-dot-dark.svg'),
+  new THREE.TextureLoader().load('outlined-dot-dark.svg'),
+  new THREE.TextureLoader().load('nested-dot-dark.svg'),
+  new THREE.TextureLoader().load('filled-dot-dark.svg'),
+  new THREE.TextureLoader().load('outlined-dot-dark.svg'),
+  new THREE.TextureLoader().load('nested-dot-dark.svg'),
+  new THREE.TextureLoader().load('filled-dot-dark.svg'),
+  new THREE.TextureLoader().load('outlined-dot-dark.svg'),
+  new THREE.TextureLoader().load('nested-dot-dark.svg'),
+);
 
 function randomTexture() {
   let texture = textureArray[Math.floor(Math.random() * textureArray.length)];
@@ -49,7 +48,7 @@ function randomTexture() {
 }
 
 function addDot() {
-  const geometry = new THREE.CircleGeometry( 0.1, 36 );
+  const geometry = new THREE.CircleGeometry( 0.1, 32 );
   const material = new THREE.MeshStandardMaterial( { 
     map: randomTexture(),
     transparent: true,
@@ -60,13 +59,13 @@ function addDot() {
   // const [x, y] = Array(2).fill().map(() => THREE.MathUtils.randFloatSpread( 30 ));
   const x = THREE.MathUtils.randFloatSpread( 30 );
   const y = THREE.MathUtils.randFloatSpread( 40 );
-  const z = THREE.MathUtils.randFloat( -5, 5 );
+  const z = THREE.MathUtils.randFloat( -5, 2 );
 
   dot.position.set(x, y, z);
   scene.add( dot );
 }
 
-Array(10000).fill().forEach(addDot);
+Array(2500).fill().forEach(addDot);
 
 const light = new THREE.AmbientLight( 0xffffff, .4 )
 scene.add( light );
@@ -76,10 +75,19 @@ scene.background = new THREE.Color(backgroundColor);
 
 camera.position.z = 10;
 
-function animate() {
+let oldy = 0;
+let cameraY = 0;
+let scrollSpeed = .002;
 
-	cube.rotation.x += 0.01;
-	cube.rotation.y += 0.01;
+window.onscroll = function(e) {
+  let changey = window.scrollY - oldy;
+  cameraY += changey * scrollSpeed;
+  camera.position.y = -cameraY;
+
+  oldy = window.scrollY;
+}
+
+function animate() {
 
 	renderer.render( scene, camera );
 
@@ -88,7 +96,7 @@ function animate() {
 window.addEventListener('resize', () => {
   camera.aspect = body.offsetWidth / body.offsetHeight;
   camera.updateProjectionMatrix();
-  renderer.setSize( window.innerWidth, body.offsetHeight );
+  renderer.setSize( body?.offsetWidth, body.offsetHeight );
 });
 
 </script>
