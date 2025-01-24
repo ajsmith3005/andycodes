@@ -96,7 +96,7 @@ function animate() {
 window.addEventListener('resize', () => {
   camera.aspect = body.offsetWidth / body.offsetHeight;
   camera.updateProjectionMatrix();
-  renderer.setSize( body?.offsetWidth, body.offsetHeight );
+  renderer.setSize( body.offsetWidth, body.offsetHeight );
 });
 
 </script>
