@@ -10,10 +10,11 @@ const { class: className, ...rest } = Astro.props;
 	@use '../styles/global-abstracts' as *;
 
 	.section-container {
-	margin-top: $spacing-60;
+	padding-top: $spacing-60;
 	padding-left: $global-padding;
 	padding-right: $global-padding;
 	display: flex;
 	justify-content: center;
+	background-color: $color-base-1;
 }
 </style>
