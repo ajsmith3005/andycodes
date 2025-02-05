@@ -2,3 +2,8 @@
 @use './abstracts';
 @use './layout';
 @use './global-abstracts' as *;
+
+
+:root {
+	--color-background: #{$color-contrast-dark};
+}
