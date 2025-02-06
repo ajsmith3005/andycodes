@@ -30,6 +30,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 anchor.addEventListener('click', function(event) {
 	event.preventDefault();
 	let targetID = this.getAttribute('href');
-	smoothScroll(targetID, 500);
+	smoothScroll(targetID, 1000);
 });
 });
