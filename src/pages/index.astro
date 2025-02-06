@@ -36,11 +36,16 @@ import '../styles/app.scss';
 			<svg class="drip-right" viewBox="0 0 890 362">
 				<path class="is-style-color-base-1" d="M890,228.5v133.5H0v-230h.01c0-.33-.01-.67-.01-1C0,58.65,58.65,0,131,0s131,58.65,131,131c0,.33-.01.67-.01,1h.01v46c0,57.44,46.56,104,104,104s104-46.56,104-104v-33h.01c0-.17-.01-.33-.01-.5,0-43.91,35.59-79.5,79.5-79.5s79.5,35.59,79.5,79.5c0,.17-.01.33-.01.5h.01v83.5c0,72.07,58.43,130.5,130.5,130.5s130.5-58.43,130.5-130.5Z"/>
 			</svg>
+			<svg class="drip-right-small" viewBox="0 0 188 99">
+				<path class="is-style-color-base-1" d="M188,23v76H0v-46.5C0,32.34,16.34,16,36.5,16s36.5,16.34,36.5,36.5v11c0,19.05,15.45,34.5,34.5,34.5s34.5-15.45,34.5-34.5V23c0-12.7,10.3-23,23-23s23,10.3,23,23Z"/>
+			</svg>
 		</div>
 		<div class="div4">
 			<div class="profile-image-container">
-				<img class="andy" src="andy.jpg" alt="Andrew Smith">
-				<div class="under-profile-image is-style-color-base-1"></div>
+				<div class="image">
+					<img class="andy" src="andy.jpg" alt="Andrew Smith">
+					<div class="under-profile-image is-style-color-base-1"></div>
+				</div>
 			</div>
 			<div class="about-me">
 				<h2>About Me</h2>
@@ -48,42 +53,10 @@ import '../styles/app.scss';
 						I've successfully completed several freelance projects, where I focused on meeting client needs, ensuring a great user experience, and working efficiently within project deadlines. I'm eager to contribute my skills and enthusiasm to a dynamic team in the web development field.</p>
 					<a class="is-style-hover-effect-1"href="/andrew-smith-resume.pdf" target="_blank">View My Resume →</a>
 			</div>
+			<div class="grid-filler"></div>
 		</div>
 		<div class="div5"></div>
 	</div>
-	<div class="about-me-container">
-		<div class="drip-left-container">
-			<!-- <svg class="drip-left" viewBox="0 0 238 687">
-				<path class="is-style-color-base-1" d="M238,119v568H0V119C0,53.28,53.28,0,119,0s119,53.28,119,119Z"/>
-			</svg> -->
-			<div class="drip-left is-style-color-base-1"></div>
-			<div class="under-drip-left is-style-color-base-1"></div>
-		</div>
-		<div class="profile-image-container">
-			<img class="andy" src="andy.jpg" alt="Andrew Smith">
-			<div class="under-profile-image is-style-color-base-1"></div>
-		</div>
-		<div class="drip-right-container">
-			<svg class="drip-right" viewBox="0 0 890 362">
-				<path class="is-style-color-base-1" d="M890,228.5v133.5H0v-230h.01c0-.33-.01-.67-.01-1C0,58.65,58.65,0,131,0s131,58.65,131,131c0,.33-.01.67-.01,1h.01v46c0,57.44,46.56,104,104,104s104-46.56,104-104v-33h.01c0-.17-.01-.33-.01-.5,0-43.91,35.59-79.5,79.5-79.5s79.5,35.59,79.5,79.5c0,.17-.01.33-.01.5h.01v83.5c0,72.07,58.43,130.5,130.5,130.5s130.5-58.43,130.5-130.5Z"/>
-			</svg>
-			<div class="about-me">
-				<h2>About Me</h2>
-				<p>Driven by a strong interest in building user-friendly and engaging online experiences, I've gained practical experience in creating websites through a combination of self-study, online courses, and hands-on projects. I graduated from Purdue University with a Bachelor of Science degree in 2019 and moved to the Portland, Oregon area in 2023.<br>
-					I've successfully completed several freelance projects, where I focused on meeting client needs, ensuring a great user experience, and working efficiently within project deadlines. I'm eager to contribute my skills and enthusiasm to a dynamic team in the web development field.</p>
-				<a class="is-style-hover-effect-1"href="/andrew-smith-resume.pdf" target="_blank">View My Resume →</a>
-			</div>
-		</div>
-	</div>
-	<!-- <svg id="a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1512 766">
-		<defs>
-			<pattern id="andy-image" width="100%" height="100%">
-			  <image href="andy.jpg" width="100%" height="100%" x="0" y="0" />
-			</pattern>
-		</defs>
-		<path fill="url(#andy-image)" d="M1381.5,359c-72.07,0-130.5-58.43-130.5-130.5v-83.5h-.01c0-.17.01-.33.01-.5,0-43.91-35.59-79.5-79.5-79.5s-79.5,35.59-79.5,79.5c0,.17.01.33.01.5h-.01v33c0,57.44-46.56,104-104,104s-104-46.56-104-104v-46h-.01c0-.33.01-.67.01-1C884,58.65,825.35,0,753,0s-131,58.65-131,131c0,.33.01.67.01,1h-.01v442H238V198c0-65.72-53.28-119-119-119S0,132.28,0,198v568h1512V228.5c0,72.07-58.43,130.5-130.5,130.5Z"/>
-		<path d="M622,574c0,106.04-85.96,192-192,192s-192-85.96-192-192,85.96-192,192-192,192,85.96,192,192Z" />
-	</svg> -->
 	<SectionContainer class="is-layout-flex-column is-style-centered">
 		<div class="is-style-content-size">
 			<h2>Additional Info,<br>or Compelling Call to Action</h2>
@@ -136,75 +109,6 @@ import '../styles/app.scss';
 		}
 	}
 
-	.about-me-container {
-		display: flex;
-		align-items: stretch;
-		overflow: hidden;
-			
-		.drip-left-container {
-			display: flex;
-			flex-direction: column;
-			flex: 1 1;
-			padding-top: 10%;
-			min-width: $global-padding;
-			align-items: last baseline;
-			
-			.drip-left {
-				width: 100%;
-				aspect-ratio: 1 / 1;
-				border-radius: 50% 50% 0 0;
-				// align-self: last baseline;
-			}
-
-			.under-drip-left {
-				margin-top: -1px;
-				// border-radius: 50% 50% 0 0;
-				flex: 1 1 1px;
-				align-self: stretch;
-			}
-		}
-
-		.profile-image-container {
-			display: block;
-			max-width: clamp(9.375rem, 4.629rem + 23.73vw, 26.875rem);
-			min-width: clamp(9.375rem, 4.629rem + 23.73vw, 26.875rem);
-			flex: 2 2 200px;
-			align-self: last baseline;
-			
-			.andy {
-				width: 100%;
-				object-fit: cover;
-				align-self: last baseline;
-				border-radius: 100%;
-				margin-bottom: -50%;
-			}
-
-			.under-profile-image {
-				width: 100%;
-				aspect-ratio: 2 / 1;
-			}	
-		}
-
-		.drip-right-container {
-			display: flex;
-			flex-direction: column;
-			flex: 3 3;
-
-			.drip-right {
-				width: 100%;
-			}
-		}
-
-		.about-me {
-			background-color: $color-base-1;
-			padding: $spacing-10 $spacing-30;
-			flex-grow: 1;
-			align-self: stretch;
-			justify-self: stretch;
-			margin-top: -1px;
-		}
-
-	}
 
 	.drip-section-transition {
 		fill: $color-base-1;
@@ -219,8 +123,8 @@ import '../styles/app.scss';
 		width: 100%;
 		// height: 100vh;
 		display: grid;
-		grid-template-columns: $global-padding repeat(3, 1fr);
-		grid-template-rows: fit-content 1fr;
+		grid-template-columns: $global-padding clamp(9.688rem, 2.983rem + 33.52vw, 28.125rem) repeat(2, 1fr);
+		grid-template-rows: 1fr;
 		grid-column-gap: 0px;
 		grid-row-gap: 0px;
 	}
@@ -264,24 +168,17 @@ import '../styles/app.scss';
 		grid-area: 2 / 2 / 3 / 5; 
 		background-color: transparent;
 		margin-top: -1px;
-		display: flex;
-		flex-wrap: wrap;
+		display: grid;
+		grid-template-columns: clamp(9.688rem, 2.983rem + 33.52vw, 28.125rem) repeat(2, 1fr);
+		grid-auto-rows: fit-content;
+		justify-items: start;
 
-		// .andy {
-		// 			width: 33%;
-		// 			object-fit: cover;
-		// 			align-self: first baseline;
-		// 			border-radius: 100%;
-		// 			// margin-bottom: -50%;
-		// 		}
-		
 		.profile-image-container {
-			width: 33.33333%;
+			width: 100%;
+			grid-area: 1 / 1 / 2 / 2;
+			align-self: start;
 			display: block;
 			background-color: transparent;
-			// max-width: clamp(9.375rem, 4.629rem + 23.73vw, 26.875rem);
-			// min-width: clamp(9.375rem, 4.629rem + 23.73vw, 26.875rem);
-			align-self: last baseline;
 			
 			.andy {
 				width: 100%;
@@ -298,17 +195,48 @@ import '../styles/app.scss';
 		}
 	
 		.about-me {
+			grid-area: 1 / 2 / 3 / 4;
 			background-color: $color-base-1;
 			padding-left: $spacing-30;
 			padding-right: $global-padding;
-			flex-basis: 25rem;
-			flex-grow: 1;
+		}
+
+		.grid-filler {
+			grid-area: 2 / 1 / 4 / 2;
+			background-color: $color-base-1;
+			width: 100%;
+			height: 100%;
 		}
 	}
-	
-	// .div5 {
-	// 	grid-area: 2 / 5 / 3 / 6;
-	// 	background-color: $color-base-1;
-	// }
+
+	.drip-right {
+		display: block;
+	}
+
+	.drip-right-small {
+		display: none;
+	}
+
+	@media screen and (max-width: 780px) {
+		.div4 { 
+
+			.about-me {
+				grid-area: 2 / 1 / 3 / 4;
+				padding-left: 0;
+			}
+
+			.grid-filler {
+				grid-area: 1 / 2 / 2 / 4;
+			}
+		}
+
+		.drip-right {
+			display: none;
+		}
+
+		.drip-right-small {
+			display: block;
+		}
+	}
 
 </style>
