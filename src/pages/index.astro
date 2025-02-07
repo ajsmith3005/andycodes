@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import SectionContainer from '../components/Section-container.astro';
+import Card from '../components/Card.astro';
 
 import '../styles/app.scss';
 ---
@@ -19,7 +20,7 @@ import '../styles/app.scss';
 			<h1>Andrew Smith</h1>
 			<p>AND I'M A FULL-STACK WEB DEVELOPER</p>
 		</div>
-		<a href="">
+		<a href="#about">
 			<svg class="is-style-hover-effect-1 read-more" width="221" height="221" viewBox="0 0 221 221" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<path fill-rule="evenodd" clip-rule="evenodd" d="M110.565 213.253C167.35 213.253 213.384 167.22 213.384 110.435C213.384 53.6497 167.35 7.61619 110.565 7.61619C53.78 7.61619 7.74656 53.6497 7.74656 110.435C7.74656 167.22 53.78 213.253 110.565 213.253ZM110.565 220.87C171.557 220.87 221 171.426 221 110.435C221 49.4433 171.557 0 110.565 0C49.5737 0 0.130371 49.4433 0.130371 110.435C0.130371 171.426 49.5737 220.87 110.565 220.87Z" />
 				<path d="M110.464 170.095C107.011 162.885 101.527 156.183 94.0126 149.988V144.657C97.2622 146.18 100.106 147.703 102.543 149.227C104.98 150.648 107.011 152.07 108.636 153.492V64.6869H115.033V153.492C116.76 152.07 118.841 150.648 121.279 149.227C123.716 147.703 126.508 146.18 129.656 144.657V149.988C122.243 156.183 116.76 162.885 113.205 170.095H110.464Z"/>
@@ -41,7 +42,7 @@ import '../styles/app.scss';
 			</svg>
 		</div>
 		<div class="div4">
-			<div class="profile-image-container">
+			<div class="profile-image-container" id="about">
 				<div class="image">
 					<img class="andy" src="andy.jpg" alt="Andrew Smith">
 					<div class="under-profile-image is-style-color-base-1"></div>
@@ -51,17 +52,30 @@ import '../styles/app.scss';
 				<h2>About Me</h2>
 					<p>Driven by a strong interest in building user-friendly and engaging online experiences, I've gained practical experience in creating websites through a combination of self-study, online courses, and hands-on projects. I graduated from Purdue University with a Bachelor of Science degree in 2019 and moved to the Portland, Oregon area in 2023.<br>
 						I've successfully completed several freelance projects, where I focused on meeting client needs, ensuring a great user experience, and working efficiently within project deadlines. I'm eager to contribute my skills and enthusiasm to a dynamic team in the web development field.</p>
-					<a class="is-style-hover-effect-1"href="/andrew-smith-resume.pdf" target="_blank">View My Resume →</a>
+					<a class="is-style-hover-effect-1" href="/andrew-smith-resume.pdf" target="_blank">View My Resume →</a>
 			</div>
 			<div class="grid-filler"></div>
 		</div>
 		<div class="div5"></div>
 	</div>
-	<SectionContainer class="is-layout-flex-column is-style-centered">
-		<div class="is-style-content-size">
-			<h2>Additional Info,<br>or Compelling Call to Action</h2>
-			<p>We will help you get the most from your website, whether you're a small business just getting started or an established company with an existing brand. We have a variety of services available for clients of all types to give you the platform you need to achieve your web based goals.</p>
-			
+	<SectionContainer class="is-style-wide">
+		<div class="is-style-content-size is-style-centered">
+			<h2>Recent Work</h2>
+			<p>Here is some of the recent work that I am most proud of. I'm passionate about building user-friendly and engaging online experiences, and I'm always eager to learn and grow as a developer.</p>
+		</div>
+		<div class="cards-container">
+			<Card imageUrl="/golf-course.jpg" title="GREEN JACKET GOLF" tags="Astro, SEO" href="https://greenjacketgolfer.com">
+				<p>I revamped this Cincinnati-based golf professionals website to help him advertise his lesson packages and children’s summer camp. I ensured that his new site was fast, easy to navigate, and met current SEO standards. I implemented Google Analytics to help the client track how many visitors his site gets.</p>
+			</Card>
+			<Card imageUrl="/rps.jpg" title="RESTORATION PART SUPPLY" tags="Wordpress, Ecommerce" href="https://www.restorationpartsupply.com/">
+				<p>This Indiana car restoration enthusiast partnered with car parts distribution companies to sell their products. I created a custom categorization system, REST endpoint, and dynamic form on the frontend for customers to sort products by year, make, and model. The current site is in its initial phase with plans to expand in the future.</p>
+			</Card>
+			<Card imageUrl="/tree-lafayette.jpg" title="Tree Lafayette" tags="Wordpress, ACF" href="https://www.treelafayette.org/">
+				<p>I have been maintaining this non-profit organization’s site, which includes WordPress core & plugin updates, new features, Google Analytics assistance, and monitoring Google Search Console alerts. This site currently uses a custom hybrid theme with PHP templates and  Advanced Custom Fields. </p>
+			</Card>
+			<Card imageUrl="/warhead-whiz.jpg" title="Warhead Whiz" tags="Javascript" href="https://warheadwhiz.andycodes.net/">
+				<p>I created this bomb game to practice more with interactivity and JavaScript logic. Using Adobe Illustrator, I created my own SVG assets for the game and coded it with vanilla JavaScript. I had fun with this project and hope to create more complex browser-based games in the future.</p>
+			</Card>
 		</div>
 	</SectionContainer>
 </Layout>
@@ -121,7 +135,6 @@ import '../styles/app.scss';
 
 	.parent {
 		width: 100%;
-		// height: 100vh;
 		display: grid;
 		grid-template-columns: $global-padding clamp(9.688rem, 2.983rem + 33.52vw, 28.125rem) repeat(2, 1fr);
 		grid-template-rows: 1fr;
@@ -146,7 +159,6 @@ import '../styles/app.scss';
 		
 		.under-drip-left {
 			margin-top: -1px;
-			// border-radius: 50% 50% 0 0;
 			flex: 1 1 1px;
 			align-self: stretch;
 		}
@@ -215,6 +227,16 @@ import '../styles/app.scss';
 
 	.drip-right-small {
 		display: none;
+	}
+
+	.cards-container {
+		display: flex;
+		max-width: $wide-size;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: $spacing-40;
+		margin-top: $spacing-20;
+		padding-bottom: $spacing-60;
 	}
 
 	@media screen and (max-width: 780px) {
