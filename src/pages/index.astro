@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import SectionContainer from '../components/Section-container.astro';
+import Card from '../components/Card.astro';
 
 import '../styles/app.scss';
 ---
@@ -57,11 +58,15 @@ import '../styles/app.scss';
 		</div>
 		<div class="div5"></div>
 	</div>
-	<SectionContainer class="is-layout-flex-column is-style-centered">
-		<div class="is-style-content-size">
-			<h2>Additional Info,<br>or Compelling Call to Action</h2>
-			<p>We will help you get the most from your website, whether you're a small business just getting started or an established company with an existing brand. We have a variety of services available for clients of all types to give you the platform you need to achieve your web based goals.</p>
-			
+	<SectionContainer class="is-style-wide">
+		<div class="is-style-content-size is-style-centered">
+			<h2>Recent Work</h2>
+			<p>Here is some of the recent work that I am most proud of. I'm passionate about building user-friendly and engaging online experiences, and I'm always eager to learn and grow as a developer.</p>
+		</div>
+		<div class="card-container">
+			<Card title="GREEN JACKET GOLF" tags="Astro, SEO">
+				<p>I revamped this Cincinnati-based golf professionals website to help him advertise his lesson packages and children’s summer camp. I ensured that his new site was fast, easy to navigate, and met current SEO standards. I implemented Google Analytics to help the client track how many visitors his site gets.</p>
+			</Card>
 		</div>
 	</SectionContainer>
 </Layout>
@@ -215,6 +220,16 @@ import '../styles/app.scss';
 
 	.drip-right-small {
 		display: none;
+	}
+
+	.card-container {
+		display: flex;
+		flex: auto;
+		max-width: $wide-size;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: $spacing-20;
+		margin-top: $spacing-20;
 	}
 
 	@media screen and (max-width: 780px) {
