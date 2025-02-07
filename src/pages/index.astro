@@ -52,7 +52,7 @@ import '../styles/app.scss';
 				<h2>About Me</h2>
 					<p>Driven by a strong interest in building user-friendly and engaging online experiences, I've gained practical experience in creating websites through a combination of self-study, online courses, and hands-on projects. I graduated from Purdue University with a Bachelor of Science degree in 2019 and moved to the Portland, Oregon area in 2023.<br>
 						I've successfully completed several freelance projects, where I focused on meeting client needs, ensuring a great user experience, and working efficiently within project deadlines. I'm eager to contribute my skills and enthusiasm to a dynamic team in the web development field.</p>
-					<a class="is-style-hover-effect-1"href="/andrew-smith-resume.pdf" target="_blank">View My Resume →</a>
+					<a class="is-style-hover-effect-1" href="/andrew-smith-resume.pdf" target="_blank">View My Resume →</a>
 			</div>
 			<div class="grid-filler"></div>
 		</div>
@@ -63,9 +63,18 @@ import '../styles/app.scss';
 			<h2>Recent Work</h2>
 			<p>Here is some of the recent work that I am most proud of. I'm passionate about building user-friendly and engaging online experiences, and I'm always eager to learn and grow as a developer.</p>
 		</div>
-		<div class="card-container">
-			<Card title="GREEN JACKET GOLF" tags="Astro, SEO">
+		<div class="cards-container">
+			<Card imageUrl="/golf-course.jpg" title="GREEN JACKET GOLF" tags="Astro, SEO" href="https://greenjacketgolfer.com">
 				<p>I revamped this Cincinnati-based golf professionals website to help him advertise his lesson packages and children’s summer camp. I ensured that his new site was fast, easy to navigate, and met current SEO standards. I implemented Google Analytics to help the client track how many visitors his site gets.</p>
+			</Card>
+			<Card imageUrl="/rps.jpg" title="RESTORATION PART SUPPLY" tags="Wordpress, Ecommerce" href="https://www.restorationpartsupply.com/">
+				<p>This Indiana car restoration enthusiast partnered with car parts distribution companies to sell their products. I created a custom categorization system, REST endpoint, and dynamic form on the frontend for customers to sort products by year, make, and model. The current site is in its initial phase with plans to expand in the future.</p>
+			</Card>
+			<Card imageUrl="/tree-lafayette.jpg" title="Tree Lafayette" tags="Wordpress, ACF" href="https://www.treelafayette.org/">
+				<p>I have been maintaining this non-profit organization’s site, which includes WordPress core & plugin updates, new features, Google Analytics assistance, and monitoring Google Search Console alerts. This site currently uses a custom hybrid theme with PHP templates and  Advanced Custom Fields. </p>
+			</Card>
+			<Card imageUrl="/warhead-whiz.jpg" title="Warhead Whiz" tags="Javascript" href="https://warheadwhiz.andycodes.net/">
+				<p>I created this bomb game to practice more with interactivity and JavaScript logic. Using Adobe Illustrator, I created my own SVG assets for the game and coded it with vanilla JavaScript. I had fun with this project and hope to create more complex browser-based games in the future.</p>
 			</Card>
 		</div>
 	</SectionContainer>
@@ -126,7 +135,6 @@ import '../styles/app.scss';
 
 	.parent {
 		width: 100%;
-		// height: 100vh;
 		display: grid;
 		grid-template-columns: $global-padding clamp(9.688rem, 2.983rem + 33.52vw, 28.125rem) repeat(2, 1fr);
 		grid-template-rows: 1fr;
@@ -151,7 +159,6 @@ import '../styles/app.scss';
 		
 		.under-drip-left {
 			margin-top: -1px;
-			// border-radius: 50% 50% 0 0;
 			flex: 1 1 1px;
 			align-self: stretch;
 		}
@@ -222,14 +229,14 @@ import '../styles/app.scss';
 		display: none;
 	}
 
-	.card-container {
+	.cards-container {
 		display: flex;
-		flex: auto;
 		max-width: $wide-size;
 		justify-content: center;
 		flex-wrap: wrap;
-		gap: $spacing-20;
+		gap: $spacing-40;
 		margin-top: $spacing-20;
+		padding-bottom: $spacing-60;
 	}
 
 	@media screen and (max-width: 780px) {
