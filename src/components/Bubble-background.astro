@@ -35,37 +35,31 @@
 		z-index: -1;
 		overflow: hidden;
 		background-color: $color-contrast-dark;
+
+		.parallax {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-size: cover;
+			background-position: center top;
+		}
 	}
 
 	.foreground {
 		background-image: url('/large-bubbles.svg');
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		background-size: cover;
-		background-position: center top;
+		
 	}
 	
 	.midground {
 		background-image: url('/medium-bubbles.svg');
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		background-size: cover;
-		background-position: center top;
 	}
 	
 	.background {
 		background-image: url('/small-bubbles.svg');
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		background-size: cover;
-		background-position: center top;
 	}
 
 	@media screen and (max-width: 780px) {
-		.background-bubbles div {
+		.background-bubbles .parallax {
 			background-size: 200%;
 		}		
 	}
