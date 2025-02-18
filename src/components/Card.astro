@@ -8,16 +8,41 @@ const { href } = Astro.props;
 ---
 <div class="card-wrapper">
 	<div class="card-drip">
-		<svg viewBox="0 0 183.94 78">
-			<path d="M183.94,32.46v45.54H0v-44.99C0,22.76,8.3,14.46,18.55,14.46s18.55,8.3,18.55,18.55v.09c0,9.81,7.96,17.77,17.77,17.77s17.78-7.96,17.78-17.77v-.64C72.65,14.53,87.18,0,105.11,0s32.46,14.53,32.46,32.46c0,12.8,10.38,23.19,23.19,23.19s23.18-10.39,23.18-23.19Z" style="fill: #252525;"/>
+		<div class="under-project-image"></div>
+		<svg
+			viewBox="0 0 185 77"
+			xmlns:svg="http://www.w3.org/2000/svg">
+			<g>
+				<rect
+					class="card-wave-background"
+					width="100%"
+					height="100%"
+				/>
+				<path
+					class="card-wave-foreground"
+					d="M 186,32.459996 V 77.999999 H 3.5142822e-4 V 33.009996 c 0,-10.25 8.35000037178,-18.55 18.65999957178,-18.55 10.31,0 18.66,8.3 18.66,18.55 v 0.09 c 0,9.81 8.01,17.77 17.87,17.77 9.86,0 17.88,-7.96 17.88,-17.77 v -0.64 c 0,-17.93 14.61,-32.459995 32.649999,-32.459995 18.04001,0 32.65,14.529995 32.65,32.459995 0,12.8 10.44,23.19 23.32,23.19 12.88,0 23.31,-10.39 23.31,-23.19 z"
+				/>
+			</g>
 		</svg>
 		<div class="project-image-container">
-			<img src={imageUrl} " alt="project image">
-			<div class="under-project-image"></div>
+			<img src={imageUrl} alt="project image">
 		</div>
-		<svg viewBox="0 0 183.94 78">
-			<path d="M0,32.46v45.54s183.94,0,183.94,0v-44.99c0-10.25-8.3-18.55-18.55-18.55s-18.55,8.3-18.55,18.55v.09c0,9.81-7.96,17.77-17.77,17.77-9.82,0-17.78-7.96-17.78-17.77v-.64C111.29,14.53,96.76,0,78.83,0c-17.93,0-32.46,14.53-32.46,32.46,0,12.8-10.38,23.19-23.19,23.19S0,45.26,0,32.46Z" style="fill: #252525;"/>
-  		</svg>
+		<svg
+			viewBox="0 0 185 77"
+			xmlns:svg="http://www.w3.org/2000/svg">
+			<g
+				transform="matrix(-1,0,0,1,185.0007,0)">
+				<rect
+					class="card-wave-background"
+					width="100%"
+					height="100%"
+				/>
+				<path
+					class="card-wave-foreground"
+					d="M 186,32.459996 V 77.999999 H 3.5142822e-4 V 33.009996 c 0,-10.25 8.35000037178,-18.55 18.65999957178,-18.55 10.31,0 18.66,8.3 18.66,18.55 v 0.09 c 0,9.81 8.01,17.77 17.87,17.77 9.86,0 17.88,-7.96 17.88,-17.77 v -0.64 c 0,-17.93 14.61,-32.459995 32.649999,-32.459995 18.04001,0 32.65,14.529995 32.65,32.459995 0,12.8 10.44,23.19 23.32,23.19 12.88,0 23.31,-10.39 23.31,-23.19 z"
+				/>
+			</g>
+		</svg>
 	</div>
 	<div class="card">
 		<div class="card-content">
@@ -51,6 +76,8 @@ const { href } = Astro.props;
 		width: 100%;
 		align-items: flex-end;
 		margin-bottom: -2px;
+		position: relative;
+		z-index: 2;
 		
 
 		.project-image-container {
@@ -60,16 +87,27 @@ const { href } = Astro.props;
 				width: 100%;
 				aspect-ratio: 1 / 1;
 				border-radius: 100%;
-				margin-bottom: -50%;
+				// margin-bottom: -50%;
 			}
 	
-			.under-project-image {
-				width: 100%;
-				aspect-ratio: 2 / 1;
-				background-color: $color-contrast-dark;
-			}
 		}
 		
+		.under-project-image {
+			position: absolute;
+			width: 50%;
+			height: 50%;
+			margin-left: 25%;
+			background-color: $color-contrast-dark;
+			z-index: -1;
+		}
+
+		.card-wave-foreground {
+		fill: $color-contrast-dark;
+		}
+
+		.card-wave-background {
+			fill: $color-base-1;
+		}
 	}
 
 	.card {
@@ -82,7 +120,6 @@ const { href } = Astro.props;
 		background-color: $color-contrast-dark;
 		padding: $spacing-05 $spacing-20 $spacing-20 $spacing-20;
 		border-radius: 0 0 $radius-1 $radius-1;
-		box-shadow: 0px 4px 4px rgba(0, 0, 0, .25);
 
 		.card-content {
 			display: flex;
@@ -104,8 +141,9 @@ const { href } = Astro.props;
 		a {
 			width: fit-content;
 		}
-	}
 
+	}
+	
 	.tag-container {
 		display: flex;
 		gap: $spacing-10;
