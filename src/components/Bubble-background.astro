@@ -1,0 +1,74 @@
+---
+---
+
+<div class="background-bubbles">
+	<div class="foreground parallax" data-paralax-speed="0.8"></div>
+	<div class="midground parallax" data-paralax-speed=".66"></div>
+	<div class="background parallax" data-paralax-speed="0.56"></div>
+</div>
+
+<script>
+	const parallaxElements = document.querySelectorAll('.parallax');
+
+	function parallax(parallaxElement: Element) {
+		let scrollPercentage = window.scrollY / (document.querySelector('body').offsetHeight - window.innerHeight) * 100;
+		parallaxElement.style.backgroundPositionY = `${scrollPercentage * parallaxElement.dataset.paralaxSpeed}%`;
+	}
+	
+	window.onscroll = () => {
+		parallaxElements.forEach(parallaxElement => {
+			parallax(parallaxElement);
+		})
+	}
+
+</script>
+
+<style lang="scss">
+	@use '../styles/_global-abstracts.scss' as *;
+
+	.background-bubbles {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		overflow: hidden;
+		background-color: $color-contrast-dark;
+	}
+
+	.foreground {
+		background-image: url('/large-bubbles.svg');
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-size: cover;
+		background-position: center top;
+	}
+	
+	.midground {
+		background-image: url('/medium-bubbles.svg');
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-size: cover;
+		background-position: center top;
+	}
+	
+	.background {
+		background-image: url('/small-bubbles.svg');
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-size: cover;
+		background-position: center top;
+	}
+
+	@media screen and (max-width: 780px) {
+		.background-bubbles div {
+			background-size: 200%;
+		}		
+	}
+		
+
+</style>
