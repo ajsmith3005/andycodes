@@ -39,7 +39,29 @@ a {
 	font-family: "Outfit", sans-serif;
 	font-weight: 600;
 	letter-spacing: .05em;
-	color: $color-accent-1;
+	color: $color-accent-2;
+
+	&.is-style-dark-link {
+		color: $color-accent-1;
+	}
+
+	&.has-arrow {
+		position: relative;
+		display: flex;
+		align-items: center;
+		gap: 0.3rem;
+
+		&::after{
+			content: "";
+			display: inline-block;
+			background-color: currentColor;
+			mask-position: center;
+			width: 1em;
+			height: 1em;
+			mask-image: url("data:image/svg+xml,%3Csvg width='9.8234997' height='8.224' viewBox='0 0 9.8234997 8.224' fill='none' xmlns='http://www.w3.org/2000/svg' xmlns:svg='http://www.w3.org/2000/svg'%3E%3Cpath d='M 7.4395,3.152 V 5.056 H 0 V 3.152 Z M 3.04,8.224 7.1515,4.112 3.04,0 h 2.6715 l 4.112,4.112 -4.112,4.112 z' fill='%231b9bac' /%3E%3C/svg%3E");
+			mask-repeat: no-repeat;
+		}
+	}
 }
 
 .is-style-hover-accent-1 {
