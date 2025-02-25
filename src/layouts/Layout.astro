@@ -17,6 +17,15 @@ const pageName = Astro.props.pageName;
 		<meta name="generator" content={Astro.generator} />
 		<script src="../scripts/scripts.js"></script>
 		<title>Andy Codes</title>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-C2FR9Q4JXN"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+  
+		  gtag('config', 'G-C2FR9Q4JXN');
+		</script>
 	</head>
 	<body class={pageName}>
 		<BubbleBackground />
